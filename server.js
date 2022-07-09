@@ -18,7 +18,8 @@ app.use(cors(), bodyParser.json());
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 app.use('/graphql', graphqlExpress({ schema }));
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
-app.get('/favicon.ico',(req,res)=>res.status(204));
+
+app.get('/favicon.ico',(req,res)=>res.status(204)); // for handling favicon error on Browser
 
 app.listen(
      port,()=>console.info(
