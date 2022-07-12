@@ -1,8 +1,8 @@
 const { DataStore } = require('notarealdb');
 
-const store = new DataStore('./data.json');
+const store = new DataStore('./data');
 
 module.exports = {
-     students:store.collection('students'),
-     collages:store.collection('colleges')
+     students: store.collection('students'),
+     collages: store.collection('colleges')
 }
